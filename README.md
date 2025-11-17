@@ -1,4 +1,4 @@
-# Cloud Patterns Visualizations
+# Cloud Animations
 
 Interactive 3D visualizations of distributed systems and cloud computing patterns using VPython.
 
