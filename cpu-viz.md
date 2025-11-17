@@ -42,10 +42,13 @@ An interactive 3D visualization of CPU architecture using VPython, featuring det
 
 1. Install Python 3.7 or higher
 2. Install VPython:
+
    ```bash
    pip install -r requirements_cpu_viz.txt
    ```
+
    or
+
    ```bash
    pip install vpython
    ```
@@ -53,6 +56,7 @@ An interactive 3D visualization of CPU architecture using VPython, featuring det
 ## Usage
 
 Run the visualization:
+
 ```bash
 python cpu_architecture_viz.py
 ```
@@ -88,6 +92,7 @@ The visualization will open in your default web browser.
 ### Example Instructions
 
 The visualization comes with a sample instruction set:
+
 ```assembly
 LOAD R1, [0x100]      # Load value from memory address 0x100 into R1
 ADD R2, R1, #5        # Add 5 to R1 and store in R2
@@ -101,7 +106,9 @@ MUL R4, R2, R3        # Multiply R2 and R3, store in R4
 You can modify the visualization by editing `cpu_architecture_viz.py`:
 
 ### Change Instructions
+
 Edit the `self.instructions` list in the `__init__` method:
+
 ```python
 self.instructions = [
     "YOUR INSTRUCTION 1",
@@ -111,13 +118,17 @@ self.instructions = [
 ```
 
 ### Adjust Execution Speed
+
 Change the rate in the `auto_run` method:
+
 ```python
 rate(2)  # Change 2 to desired cycles per second
 ```
 
 ### Modify Colors
+
 Edit color definitions in the `__init__` method:
+
 ```python
 self.PIPELINE_COLOR = vector(0.2, 0.5, 0.8)  # R, G, B (0-1 range)
 self.CACHE_COLOR = vector(0.8, 0.6, 0.2)
@@ -149,16 +160,19 @@ self.CACHE_COLOR = vector(0.8, 0.6, 0.2)
 ## Troubleshooting
 
 **Visualization doesn't open:**
+
 - Ensure VPython is installed correctly
 - Check that your default browser supports WebGL
 - Try using Chrome or Firefox
 
 **Slow performance:**
+
 - Close other browser tabs
 - Reduce the auto-run speed
 - Check system resources
 
 **Installation issues:**
+
 - Make sure Python 3.7+ is installed
 - Try upgrading pip: `pip install --upgrade pip`
 - Install VPython directly: `pip install vpython`
@@ -166,6 +180,7 @@ self.CACHE_COLOR = vector(0.8, 0.6, 0.2)
 ## Future Enhancements
 
 Potential additions:
+
 - Branch prediction visualization
 - Hazard detection and forwarding
 - Out-of-order execution
